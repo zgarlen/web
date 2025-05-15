@@ -8,6 +8,9 @@
     <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
     <link href="./layui/css/layui.css" rel="stylesheet">
     <style>
+        .layui-carousel>[carousel-item]>* {
+            background-color: #fff;
+        }
         .layui-carousel[lay-anim=updown] .layui-carousel-ind ul {
                 list-style-type: none;
                 width: 170px;
@@ -34,90 +37,154 @@
             background: #fff;
         }
         .index-header {
-      height: 116px;
-      line-height: 80px;
-      min-width: 1100px;
-    }
-    
-    .index-block {
-      width: 1100px;
-      margin: 0 auto;
-      height: 516px;
-      padding: 20px 0;
-      position: relative;
-    }
-    .index-header .index-block {
-        height: 80px;
-        padding-top: 36px;
-    }
-    .logo {
-      width: 200px;
-      height: 80px;
-      float: left;
-      background: url(./images/logo-index.png) no-repeat 0, center;
-    }
-    .index-header .index-right {
-        float: right;
-    }
-    .part1 {
-        position: relative;
-        height: 650px;
-        min-width: 1100px;
-        background: #D9EAF8;
-        margin-top: 36px;
-    }
-    .part1-title {
-        width: 1100px;
-        height: 68px;
-        margin-top: 50px;
-        background: url(./images/index-title.png) no-repeat center center;
-    }
-    .part1 .index-p1-img {
-        height: 410px;
-        padding-top: 60px ;
-        text-align: center;
-        -webkit-background-size: 100% 100%;
-                background-size: 100%;
-    }
-   .layui-breadcrumb a {
-        color: #666 !important;
-    }
-    .part2{
-        height: 560px; /* 父容器需有固定高度 */
-        display: flex; /* 启用 Flex 布局 */
-        align-items: center; /* 垂直居中 */
-        justify-content: center; /* 水平居中 */
-        width: 1100px;
-        padding-top: 300px;
-    }
-    .part2 .left {
-        position: relative;
-        width: 630px;
-        height: 510px;
-        overflow: hidden;
-        background: url(./images/part3-bg.png) no-repeat center center;
-    }
-    .part2 .right {
-        margin: 0;
-    }
-    .part2 h4 {
-        font-size: 32px;
-        color: #26b887;
+        height: 116px;
         line-height: 80px;
-    }
-    .part2 h4 a,
-    .part2 h4 a:link,
-    .part2 h4 a:visited {
-        color: #26b887;
-    }
-    .part2 h4 a:hover {
-        text-decoration: underline;
-    }
-    .part2 p {
-        font-size: 18px;
-        color: #7f7e7e;
-        line-height: 42px;
-    }
+        min-width: 1100px;
+        }
+        
+        .index-block {
+        width: 1100px;
+        margin: 0 auto;
+        height: 516px;
+        padding: 20px 0;
+        position: relative;
+        }
+        .index-header .index-block {
+            height: 80px;
+            padding-top: 36px;
+        }
+        .logo {
+        width: 200px;
+        height: 80px;
+        float: left;
+        background: url(./images/logo-index.png) no-repeat 0, center;
+        }
+        .index-header .index-right {
+            float: right;
+        }
+        .part1 {
+            position: relative;
+            height: 650px;
+            min-width: 1100px;
+            background: #D9EAF8;
+            margin-top: 36px;
+        }
+        .part1-title {
+            width: 1100px;
+            height: 68px;
+            margin-top: 50px;
+            background: url(./images/index-title.png) no-repeat center center;
+        }
+        .part1 .index-p1-img {
+            height: 410px;
+            padding-top: 60px ;
+            text-align: center;
+            -webkit-background-size: 100% 100%;
+                    background-size: 100%;
+        }
+    .layui-breadcrumb a {
+            color: #666 !important;
+        }
+        .part{
+            height: 560px; /* 父容器需有固定高度 */
+            width: 1100px;
+            padding-top: 100px;
+        }
+        .part2 .left {
+            width: 630px;
+            height: 510px;
+            overflow: hidden;
+            background: url(./images/part3-bg.png) no-repeat center center;
+            float: left;
+        }
+        .part2 .right {
+            width: 470px;
+            height: 510px;
+            margin-top: 140px;
+            float: right;
+        }
+        .part3{
+            width: 900px;
+        }
+        .part3 .left{
+            float: left;
+            margin: 160px 0 0 50px;
+        }
+        .part3 .right{
+            width: 310px;
+            height: 510px;
+            float: right;
+            background: url(./images/part2.png) no-repeat center center;
+            -webkit-background-size: 100% 100%;
+                    background-size: 100%;
+        }
+        .part4 .left{
+            width: 500px;
+            height: 510px;
+            float: left;
+            background: url(./images/part4.png) no-repeat 122px 153px;
+        }
+        .part4 .right{
+            margin-top: 106px;
+            float: right;
+        }
+        .part5 .left{
+            margin: 88px 0 0 0;
+            float: left;
+        }
+        .part5 .right {
+            float: right;
+            margin-right: 29px;
+            width: 377px;
+            height: 510px;
+            background: url(./images/part5.png) no-repeat center center;
+        }
+        .part6 .left {
+            float: left;
+            width: 603px;
+            height: 510px;
+            background: url(./images/part6.png) no-repeat center center;
+            -webkit-background-size: 100% 100%;
+                    background-size: 100%;
+        }
+        .part6 .right {
+            margin-top: 85px;
+            float: right;
+        }
+        .part7 {
+            width: 800px;
+            height: 420px;
+        }
+        .part7 .left{
+            margin: 120px 0 0 0;
+            float: left;
+        }
+        .part7 .right {
+            width: 376px;
+            height: 450px;
+            background: url(./images/part7.png) no-repeat center center;
+            -webkit-background-size: 100% 100%;
+                    background-size: 100%;
+            float: right;
+        }
+        h4 {
+            font-size: 32px;
+            color: #26b887;
+            line-height: 80px;
+        }
+        h4 a,
+        h4 a:link,
+        h4 a:visited {
+            color: #26b887;
+        }
+        h4 a:hover {
+            text-decoration: underline;
+        }
+        .part p {
+            font-size: 18px;
+            color: #7f7e7e;
+            line-height: 42px;
+        }
     </style>
 </head>
 
@@ -151,20 +218,83 @@
                 </div>
             </div>
             <div class="page">
-                <div class="layui-container part2">
-                            <div class="left"></div>
-                            <div class="right">
-                                <h4><a href="https://my.chsi.com.cn/archive/gdjy/xj/show.action">免费查看学籍、学历、学位信息</a></h4>
-                                <p>实名注册后即可免费查看本人的高等教育学籍、<br>学历、学位、考研等信息。</p>
-                            </div>
+                <div class="layui-container part part2">
+                        <div class="left"></div>
+                        <div class="right">
+                            <h4><a href="https://my.chsi.com.cn/archive/gdjy/xj/show.action">免费查看学籍、学历、学位信息</a></h4>
+                            <p>实名注册后即可免费查看本人的高等教育学籍、<br>学历、学位、考研等信息。</p>
+                        </div>
                 </div>
                 
             </div>
-            <div class="page">条目3</div>
-            <div class="page">条目4</div>
-            <div class="page">条目5</div>
-            <div class="page">条目5</div>
-            <div class="page">条目5</div>
+            <div class="page">
+                <div class="layui-container part part3">
+                    
+                    <div class="left">
+                        <h4><a href="https://my.chsi.com.cn/archive/gdjy/xj/show.action">校对本人学历照片</a></h4>
+                        <p>学历照片很重要，及时校对很有必要。</p>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="layui-container part part4">
+                    
+                    <div class="left"></div>
+                    <div class="right">
+                        <h4 style="line-height: 45px;margin-bottom: 15px;"><a href="https://my.chsi.com.cn/archive/bab/index.action">免费申请学籍、学历、学位<br>在线验证报告</a></h4>
+                        <p><span class="spot-blue">&nbsp;</span>报告使用场景：</p>
+                        <p>求职招聘、派遣接收、升学(考研、专升本)、出国留学、</p>
+                        <p>干部任免、职称评定、信用评估等。</p>
+                        <p><span class="spot-yellow">&nbsp;</span>报告特点：</p>
+                        <p>多次免费验证、多重防伪、多次打印。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="layui-container part part5">
+                    
+                    <div class="left" style="width: 580px;margin-top:50px;">
+                        <h4><a href="https://my.chsi.com.cn/archive/rzbg/index.action">查看或绑定学历学位认证与成绩验证报告</a></h4>
+                        <p><span class="layui-badge-dot"></span>&nbsp;《中国高等教育学历认证报告》</p>
+                        <p><span class="layui-badge-dot layui-bg-orange"></span>&nbsp;《中国中等教育学历验证报告》</p>
+                        <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;《中国高等学校学生成绩验证报告》</p>
+                        <p><span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;《中国高等学校招生入学考试成绩验证报告》 </p>
+                        <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;《中国中等学校学生成绩验证报告》 </p>
+                        <p><span class="layui-badge-dot layui-bg-black"></span>&nbsp;《普通高中学业水平考试（会考）成绩验证报告》</p>
+                        <p><span class="layui-badge-dot layui-bg-gray"></span>&nbsp;《中国高等教育学位认证报告》</p>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="layui-container part part6">
+                    
+                    <div class="left"></div>
+                    <div class="right">
+                        <h4><a href="https://my.chsi.com.cn/archive/gjhz/index.action">向所申请的国外大学发送报告</a></h4>
+                        <p>合作机构：</p>
+                        <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;美国大学网ApplyWeb</p>
+                        <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;美国Parchment</p>
+                        <p><span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;美国学生信息中心NSC</p>
+                        <p><span class="layui-badge-dot layui-bg-black"></span>&nbsp;爱尔兰Digitary</p>
+                        <p><span class="layui-badge-dot layui-bg-orange"></span>&nbsp;荷兰DUO</p>
+                        <p><span class="layui-badge-dot"></span>&nbsp;World Education Services (WES)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="layui-container part part7">
+                    
+                    <div class="left">
+                        <h4><a href="https://my.chsi.com.cn/archive/survey/index.action">参与调查问卷和投票</a></h4>
+                        <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;对所读大学的优势专业进行投票推荐</p>
+                        <p><span class="layui-badge-dot layui-bg-orange"></span>&nbsp;对就读大学和就读专业进行满意度的评价</p>
+                        <p><span class="layui-badge-dot"></span>&nbsp;对就业状况进行反馈</p>
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
             <div class="page">条目5</div>
             <div class="page">条目n</div>
         </div>
@@ -188,12 +318,21 @@
                 full: true
             });
             $('#ID-carousel-demo-set').on('wheel', function (e) {//鼠标滚轮事件
+                var itemCount = inst.elemItem.length;
+                var currentIndex = inst.config.index;
                 if (e.originalEvent.deltaY > 0) { // 向下滚动
-                    inst.next();
+                    currentIndex++;
+                    if (currentIndex >= itemCount - 1) { // 到达最后一个元素
+                        currentIndex = itemCount - 1; // 保持在最后一个元素
+                    }
                 } else if (e.originalEvent.deltaY < 0) { // 向上滚动
-                    inst.prev();
+                    currentIndex--;
+                    if (currentIndex <= 0) { // 到达第一个元素
+                        currentIndex = 0; // 保持在第一个元素
+                    }
+                    
                 }
-                
+                inst.goto(currentIndex);
             });
             setTimeout(function () {
                 var indicatorsName = ['TOP', '高等教育信息', '图像校对', '在线验证报告', '学历学位认证与成绩验证', '出国报告发送', '调查/投票', '职业测评', '就业'];
