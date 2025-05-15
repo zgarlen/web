@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>学信档案</title>
+  <link rel="stylesheet" href="./layui/css/layui.css">
+  <script src="./layui/layui.js"></script>
+  <style>
+    .page {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    .index-header {
+      height: 116px;
+      line-height: 80px;
+      min-width: 1100px;
+    }
+    
+    .index-block {
+      width: 1100px;
+      margin: 0 auto;
+      height: 516px;
+      padding: 20px 0;
+      position: relative;
+    }
+    .index-header .index-block {
+        height: 80px;
+        padding-top: 36px;
+    }
+    .logo {
+      width: 200px;
+      height: 80px;
+      float: left;
+      background: url(./images/logo-index.png) no-repeat 0, center;
+    }
+    .index-header .index-right {
+        float: right;
+    }
+    .part1 {
+        position: relative;
+        height: 650px;
+        min-width: 1100px;
+        background: #D9EAF8;
+        margin-top: 36px;
+    }
+    .part1-title {
+        width: 1100px;
+        height: 68px;
+        margin-top: 50px;
+        background: url(./images/index-title.png) no-repeat center center;
+    }
+    .part1 .index-p1-img {
+        height: 410px;
+        padding-top: 60px ;
+        text-align: center;
+        -webkit-background-size: 100% 100%;
+                background-size: 100%;
+    }
+   .layui-breadcrumb a {
+        color: #666 !important;
+    }  
+    .index-part3 {
+        min-width: 1100px;
+        height: 560px;
+        background: #fff;
+    }
+             
+  </style>
+</head>
+<body>
+    <!-- <div class="layui-tab layui-tab-brief" lay-filter="pageTab">
+        <ul class="layui-tab-title">
+            <li class="layui-this">选项卡1</li>
+            <li>选项卡2</li>
+            <li>选项卡3</li>
+        </ul>
+    </div> -->
+    <div class="page">
+        <div class="index-header">
+            <div class="index-block">
+                <div class="logo"></div>
+                <div class="index-right">
+                    <span class="layui-breadcrumb" lay-separator="|">
+                        <a href="">学信网</a>
+                        <a href="">帮助中心</a>
+                        <a href="">联系我们</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="part1">
+            <div class="index-block">
+                <div class="part1-title"></div>
+                <div class="index-p1-img atn">
+                    <button type="button" class="layui-btn layui-btn-lg">登录学信档案</button>
+                    <button type="button" class="layui-btn layui-btn-lg layui-btn-primary layui-border-green">注册学信网账号</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
+        <div class="index-part3"></div>
+    </div>
+</body>
+</html>

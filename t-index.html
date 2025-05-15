@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <style>
+        .layui-carousel[lay-anim=updown] .layui-carousel-ind ul {
+                list-style-type: none;
+                width: 170px;
+                padding: 0;
+                background: none;
+
+        }
+        .layui-carousel[lay-anim=updown] .layui-carousel-ind ul li{
+            margin-top: 10px;
+            width: 170px;
+            height: 39px;
+            border-radius:0%;
+            background-color: #eaf1f7;
+            color: #4b6e91;
+            line-height: 39px;
+        }
+        .layui-carousel[lay-anim=updown] .layui-carousel-ind ul li.layui-this{
+            background-color: #4295e8;
+            color: #fff;
+        }
+        .page{
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        .index-header {
+      height: 116px;
+      line-height: 80px;
+      min-width: 1100px;
+    }
+    
+    .index-block {
+      width: 1100px;
+      margin: 0 auto;
+      height: 516px;
+      padding: 20px 0;
+      position: relative;
+    }
+    .index-header .index-block {
+        height: 80px;
+        padding-top: 36px;
+    }
+    .logo {
+      width: 200px;
+      height: 80px;
+      float: left;
+      background: url(./images/logo-index.png) no-repeat 0, center;
+    }
+    .index-header .index-right {
+        float: right;
+    }
+    .part1 {
+        position: relative;
+        height: 650px;
+        min-width: 1100px;
+        background: #D9EAF8;
+        margin-top: 36px;
+    }
+    .part1-title {
+        width: 1100px;
+        height: 68px;
+        margin-top: 50px;
+        background: url(./images/index-title.png) no-repeat center center;
+    }
+    .part1 .index-p1-img {
+        height: 410px;
+        padding-top: 60px ;
+        text-align: center;
+        -webkit-background-size: 100% 100%;
+                background-size: 100%;
+    }
+   .layui-breadcrumb a {
+        color: #666 !important;
+    }
+    .part2{
+        height: 560px; /* 父容器需有固定高度 */
+        display: flex; /* 启用 Flex 布局 */
+        align-items: center; /* 垂直居中 */
+        justify-content: center; /* 水平居中 */
+        width: 1100px;
+        padding-top: 300px;
+    }
+    .part2 .left {
+        position: relative;
+        width: 630px;
+        height: 510px;
+        overflow: hidden;
+        background: url(./images/part3-bg.png) no-repeat center center;
+    }
+    .part2 .right {
+        margin: 0;
+    }
+    .part2 h4 {
+        font-size: 32px;
+        color: #26b887;
+        line-height: 80px;
+    }
+    .part2 h4 a,
+    .part2 h4 a:link,
+    .part2 h4 a:visited {
+        color: #26b887;
+    }
+    .part2 h4 a:hover {
+        text-decoration: underline;
+    }
+    .part2 p {
+        font-size: 18px;
+        color: #7f7e7e;
+        line-height: 42px;
+    }
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="layui-carousel" id="ID-carousel-demo-set" lay-filter="filter-demo-carousel-set">
+        <div carousel-item>
+            <div class="page">
+                <div class="index-header">
+                    <div class="index-block">
+                        <div class="logo"></div>
+                        <div class="index-right">
+                            <span class="layui-breadcrumb" lay-separator="|">
+                                <a href="">学信网</a>
+                                <a href="">帮助中心</a>
+                                <a href="">联系我们</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="part1">
+                    <div class="index-block">
+                        <div class="part1-title"></div>
+                        <div class="index-p1-img atn">
+                            <button type="button" class="layui-btn layui-btn-lg">登录学信档案</button>
+                            <button type="button" class="layui-btn layui-btn-lg layui-btn-primary layui-border-green">注册学信网账号</button>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="layui-container part2">
+                            <div class="left"></div>
+                            <div class="right">
+                                <h4><a href="https://my.chsi.com.cn/archive/gdjy/xj/show.action">免费查看学籍、学历、学位信息</a></h4>
+                                <p>实名注册后即可免费查看本人的高等教育学籍、<br>学历、学位、考研等信息。</p>
+                            </div>
+                </div>
+                
+            </div>
+            <div class="page">条目3</div>
+            <div class="page">条目4</div>
+            <div class="page">条目5</div>
+            <div class="page">条目5</div>
+            <div class="page">条目5</div>
+            <div class="page">条目5</div>
+            <div class="page">条目n</div>
+        </div>
+    </div>
+
+    <!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+    <script src="./layui/layui.js"></script>
+    <script>
+        layui.use(function () {
+            var carousel = layui.carousel;
+            var $ = layui.$;
+
+            // 初始化轮播
+            var inst = carousel.render({
+                elem: '#ID-carousel-demo-set',
+                anim: 'updown',
+                width: '100vw',
+                height: '100vh',
+                arrow: 'none',
+                autoplay: false,
+                full: true
+            });
+            $('#ID-carousel-demo-set').on('wheel', function (e) {//鼠标滚轮事件
+                if (e.originalEvent.deltaY > 0) { // 向下滚动
+                    inst.next();
+                } else if (e.originalEvent.deltaY < 0) { // 向上滚动
+                    inst.prev();
+                }
+                
+            });
+            setTimeout(function () {
+                var indicatorsName = ['TOP', '高等教育信息', '图像校对', '在线验证报告', '学历学位认证与成绩验证', '出国报告发送', '调查/投票', '职业测评', '就业'];
+                // 获取指示器元素
+                var indicators = $('#ID-carousel-demo-set .layui-carousel-ind ul li');
+
+                // 添加文本
+                indicators.each(function (index) {
+                    $(this).html('<span> ' + indicatorsName[index] + '</span>');
+                });
+
+                // 修改激活状态样式
+                $('#ID-carousel-demo-set .layui-carousel-ind ul li').on('click', function () {
+                    $(this).addClass('layui-this').siblings().removeClass('layui-this');
+                });
+            }, 500); 
+            
+        });
+    </script>
+
+</body>
+
+</html>
