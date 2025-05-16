@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Demo</title>
-    <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
     <link href="./layui/css/layui.css" rel="stylesheet">
     <style>
         .layui-carousel>[carousel-item]>* {
@@ -35,52 +33,95 @@
             margin: 0;
             padding: 0;
             background: #fff;
-        }
-        .index-header {
-        height: 116px;
-        line-height: 80px;
-        min-width: 1100px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
-        .index-block {
-        width: 1100px;
-        margin: 0 auto;
-        height: 516px;
-        padding: 20px 0;
-        position: relative;
+        .index-header {
+            height: auto;
+            line-height: 1.5;
+            min-width: auto;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: 80px;
+            float: left;
+            background: url(./images/logo-index.png) no-repeat 0, center;
         }
         .index-header .index-block {
             height: 80px;
             padding-top: 36px;
         }
-        .logo {
-        width: 200px;
-        height: 80px;
-        float: left;
-        background: url(./images/logo-index.png) no-repeat 0, center;
-        }
         .index-header .index-right {
+            margin-top: 36px;
             float: right;
         }
+        .index-block {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            flex: 1;
+        }
+        
         .part1 {
             position: relative;
-            height: 650px;
-            min-width: 1100px;
+            min-height: 650px;
             background: #D9EAF8;
-            margin-top: 36px;
+            display: flex;
         }
+        
         .part1-title {
-            width: 1100px;
+            width: 100%;
+            max-width: 1100px;
             height: 68px;
             margin-top: 50px;
             background: url(./images/index-title.png) no-repeat center center;
         }
+        
         .part1 .index-p1-img {
-            height: 410px;
-            padding-top: 60px ;
+            height: auto;
+            padding: 60px 20px;
             text-align: center;
-            -webkit-background-size: 100% 100%;
-                    background-size: 100%;
+        }
+        
+        /* 添加媒体查询以适应不同屏幕尺寸 */
+        @media (max-width: 768px) {
+            .index-header .index-block {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .logo {
+                float: none;
+                margin: 0 auto;
+            }
+        
+            .index-header .index-right {
+                float: none;
+                margin-top: 20px;
+            }
+        
+            .part1 .index-p1-img {
+                padding: 30px 10px;
+            }
+        
+            .layui-btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .part1 {
+                min-height: 500px;
+            }
+        
+            .part1-title {
+                margin-top: 30px;
+            }
         }
     .layui-breadcrumb a {
             color: #666 !important;
@@ -167,6 +208,19 @@
                     background-size: 100%;
             float: right;
         }
+        .part8 .left {
+            width: 404px;
+            height: 343px;
+            margin-top: 120px;
+            background: url(./images/part8.png) no-repeat center center;
+            -webkit-background-size: 100% 100%;
+            background-size: 100%;
+            float: left;
+        }
+        .part8 .right {
+            margin-top: 105px;
+            float: right;
+        }
         h4 {
             font-size: 32px;
             color: #26b887;
@@ -184,6 +238,31 @@
             font-size: 18px;
             color: #7f7e7e;
             line-height: 42px;
+        }
+        .part9{
+            min-width: 1180px;
+            height: 258px;
+            margin-top: 80px;
+            height: 238px;
+            background: #26b887;
+            text-align: center;
+        }
+        .part9 h4 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 40px;
+            padding: 30px 0;
+        }
+        .footer {
+            background: #fff;
+            width: 100%;
+            min-width: 1180px;
+            text-align: center;
+            color: #a8a8a8;
+            line-height: 24px;
+            height: 80px;
+            padding-top: 16px;
         }
     </style>
 </head>
@@ -227,7 +306,7 @@
                 </div>
                 
             </div>
-            <div class="page">
+            <div class="page" style="background-color:rgb(247, 247, 247)">
                 <div class="layui-container part part3">
                     
                     <div class="left">
@@ -251,7 +330,7 @@
                     </div>
                 </div>
             </div>
-            <div class="page">
+            <div class="page"  style="background-color:rgb(247, 247, 247)">
                 <div class="layui-container part part5">
                     
                     <div class="left" style="width: 580px;margin-top:50px;">
@@ -262,7 +341,7 @@
                         <p><span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;《中国高等学校招生入学考试成绩验证报告》 </p>
                         <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;《中国中等学校学生成绩验证报告》 </p>
                         <p><span class="layui-badge-dot layui-bg-black"></span>&nbsp;《普通高中学业水平考试（会考）成绩验证报告》</p>
-                        <p><span class="layui-badge-dot layui-bg-gray"></span>&nbsp;《中国高等教育学位认证报告》</p>
+                        <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;《中国高等教育学位认证报告》</p>
                     </div>
                     <div class="right"></div>
                 </div>
@@ -283,7 +362,7 @@
                     </div>
                 </div>
             </div>
-            <div class="page">
+            <div class="page"  style="background-color:rgb(247, 247, 247)">
                 <div class="layui-container part part7">
                     
                     <div class="left">
@@ -295,8 +374,39 @@
                     <div class="right"></div>
                 </div>
             </div>
-            <div class="page">条目5</div>
-            <div class="page">条目n</div>
+            <div class="page" style="height: 0;">条目5</div>
+            <div class="page">
+                <div class="layui-container part part8">
+                    <div class="left"></div>
+                    <div class="right">
+                        <h4 style="line-height: 45px;"><a href="https://www.ncss.cn/" target="_blank">享受教育部大学生职业网（新职业）<br>的求职招聘服务</a></h4>
+                        <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;更真实的“职位库”，为你量身推荐，与众不同、独一无二</p>
+                        <p><span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;更优质的“企业库”，由你徜徉梦想天空，官方独有标签加持</p>
+                        <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;更大型的“招聘会”，为你提供最多沟通机会，多部委、省市、高校联办</p>
+                        <p><span class="layui-badge-dot layui-bg-orange"></span>&nbsp;更独家的“师兄师姐去哪儿”，揭秘同学校同专业前辈们的就业方向</p>
+                        <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;更官方的“推荐指数”，为你评估与心仪企业的匹配度</p>
+                        <p><span class="layui-badge-dot"></span>&nbsp;更接地气的“面试经验”，真实反映心仪职位的面试要点与实地体验</p>
+                    </div>
+                </div>
+                <div class="part9">
+                    <h4>现在就开始使用学信档案</h4>
+                    <div style="margin-bottom: 30px;">
+                    
+                        <button type="button" class="layui-btn layui-btn-lg" style="background-color: #fff; color:#26b887">登录学信档案</button>
+                        <button type="button" class="layui-btn layui-btn-lg" style="background-color: #26b887; color:#fff;border:1px #fff solid">注册学信网账号</button>
+                    
+                    </div>
+                    <div class="footer">
+                        <a href="https://www.chsi.com.cn/" target="_blank">学信网</a>　|　<a
+                            href="https://my.chsi.com.cn/archive/help/index.action" target="_blank">帮助中心</a>　|　Copyright © 2003-2025 学信网 All
+                        Rights Reserved<br>
+                        <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19004913号-1</a>　<a
+                            href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747" target="_blank"><img
+                                src="./学信档案_files/jgwab.svg" style="vertical-align: middle;margin-bottom: 2px;margin-left: 8px;">
+                            京公网安备11010202009747号</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -315,7 +425,9 @@
                 height: '100vh',
                 arrow: 'none',
                 autoplay: false,
-                full: true
+                full: true,
+                trigger: 'none'
+                
             });
             $('#ID-carousel-demo-set').on('wheel', function (e) {//鼠标滚轮事件
                 var itemCount = inst.elemItem.length;
@@ -324,11 +436,15 @@
                     currentIndex++;
                     if (currentIndex >= itemCount - 1) { // 到达最后一个元素
                         currentIndex = itemCount - 1; // 保持在最后一个元素
+                    }else if (currentIndex == 7) { // 到达最后一个元素
+                        currentIndex = 8; // 保持在最后一个元素
                     }
                 } else if (e.originalEvent.deltaY < 0) { // 向上滚动
                     currentIndex--;
                     if (currentIndex <= 0) { // 到达第一个元素
                         currentIndex = 0; // 保持在第一个元素
+                    }else if (currentIndex == 7) { // 到达第一个元素
+                        currentIndex = 6; // 保持在第一个元素
                     }
                     
                 }
@@ -349,6 +465,15 @@
                     $(this).addClass('layui-this').siblings().removeClass('layui-this');
                 });
             }, 500); 
+            $('#ID-carousel-demo-set .layui-carousel-ind ul li').on('click', function (e) {
+                e.preventDefault(); // 阻止默认行为
+                var targetIndex = $(this).index();
+                if (targetIndex != 7) {
+                    inst.goto(targetIndex);
+                }else{
+                    window.location.href="https://baidu.com"
+                }
+            });
             
         });
     </script>

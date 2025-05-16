@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录_学信档案</title>
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .login-layout {
+            padding-top: 128px;
+            min-height: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding-bottom: 132px;
+            box-sizing: border-box;
+            width: 50%;
+            margin-left: 25%;
+        }
+        .login-logo {
+            position: absolute;
+            top: 36px;
+            left: 32px;
+            display: flex;
+            align-items: center;
+            width: calc(100% - 64px);
+            box-sizing: border-box;
+            height: 22px;
+        }
+        .login-logo h1{
+            font-size: 0;
+            height: 33px;
+            width: 166px;
+            background-image: url(https://t4.chei.com.cn/passport/assets/images/my/logo.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        .logo-right {
+            font-size: 14px;
+            line-height: 22px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+       .login-content {
+            width: 400px;
+       }
+       .login-form h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #13161B;
+            line-height: 40px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .login-form h3 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #8D949F;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .login-form h3 a,
+        .login-form h3 a:hover {
+            color: #60656E;
+        }
+        .layui-form{
+            margin-bottom: 16px;
+        }
+        .layui-input-wrap,.layui-input-block{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .account-oprate{
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            height: 14px;
+        }
+        .find-mm{
+            float: left;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        .regist-btn{
+            float: right;
+            font-size: 14px;
+        }
+        .wx-container{
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            position: relative;
+            padding-top: 25px;
+            border-top: 1px solid #E8EAED;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+       }
+       .wx-container-title{
+            padding: 0 10px;
+            background: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            color: #8D949F;
+            line-height: 20px;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+       }
+    </style>
+    
+</head>
+<body>
+   <div class="login-layout">
+        <div class="login-logo">
+            <div class="logo-left">
+                <h1></h1>
+            </div>
+            <div class="logo-right">
+                <span class="layui-breadcrumb" lay-separator="|">
+                    <a href="#">首页</a>
+                    <a href="#">帮助中心</a>
+                    <a href="#">联系我们</a>
+                </span>
+            </div>
+        </div>
+        <div class="login-content">
+            <div class="login-form">
+                <div class="ncss-stu-title">
+                    <h2>登录</h2>
+                    <h3>请使用 <a
+                            href="https://account.chsi.com.cn/account/help/index.jsp?keywords=%E5%AD%A6%E4%BF%A1%E7%BD%91%E8%B4%A6%E5%8F%B7%E5%8F%AF%E4%BB%A5%E5%81%9A%E4%BB%80%E4%B9%88"
+                            target="_blank" rel="noopener noreferrer">学信网账号</a> 进行登录</h3>
+                </div>
+                <div class="login-input">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-input-wrap">
+                                <div class="layui-input-prefix">
+                                    <i class="layui-icon layui-icon-username"></i>
+                                </div>
+                                <input type="text" name="username" required lay-verify="required" placeholder="手机号/邮箱" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-wrap">
+                                <div class="layui-input-prefix">
+                                    <i class="layui-icon layui-icon-password"></i>
+                                </div>
+                                <input type="password" name="password" required lay-verify="required" placeholder="密码"  class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="login">登录</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="account-oprate">
+                        <a href="https://account.chsi.com.cn/account/password!retrive" class="find-mm">找回密码</a>
+                        <a href="https://account.chsi.com.cn/account/preregister.action?from=archive" class="regist-btn">注册</a>
+                    </div>
+                    <div class="wx-container">
+                        <div class="wx-container-title">其他登录方式</div>
+                        <i class="layui-icon layui-icon-login-wechat" style="font-size: 30px; color: #07C160;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+    <script src="./layui/layui.js"></script>
+</body>
+</html>
