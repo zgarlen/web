@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录_学信档案</title>
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(247, 247, 247);
+        }
+        .regist-header{
+            width: 100%;
+            height: 80px;
+            background-color: #fff;
+        }
+        .regist-header .login-logo {
+            position: absolute;
+            top: 36px;
+            left: 10%;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            box-sizing: border-box;
+            height: 22px;
+        }
+        .login-logo h1{
+            font-size: 0;
+            height: 33px;
+            width: 166px;
+            background-image: url(https://t4.chei.com.cn/passport/assets/images/my/logo.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+        .logo-right {
+            font-size: 14px;
+            line-height: 22px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .regist-content {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            border: 1px solid #ededed;
+            background: #fff;
+            margin: 20px auto;
+            min-height: 400px;
+        }
+        .regist-tips {
+            background: #2FAFBC;
+            padding: 15px 100px;
+            margin-bottom: 20px;
+            color: #fff;
+            line-height: 1.8;
+        }
+        .regist-tips h2 {
+            font-size: 18px;
+            text-align: left;
+            font-weight: 400;
+        }
+        .regist-tips .regist-tips-detail {
+            margin-top: 5px;
+            font-size: 14px;
+            text-align: justify;
+        }
+        .regist-tips .regist-tips-detail a {
+            color: #fff;
+        }
+       .regist-content form {
+            width: 70%;
+            margin-left: 20%;
+        }
+        .layui-form-label{
+            color: #666;
+        }
+        .layui-form-item .layui-input-inline {
+                width: 35%;
+        }
+        .layui-input {
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #cdcdcd;
+            border-radius: 4px;
+        }
+        .required{
+            color: #e85759;
+            vertical-align: inherit;
+        }
+        .footer {
+            background: #fff;
+            width: 100%;
+            min-width: 1180px;
+            text-align: center;
+            color: #a8a8a8;
+            line-height: 24px;
+            height: 80px;
+            padding-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="regist-header">
+        <div class="login-logo">
+            <div class="logo-left">
+                <h1></h1>
+            </div>
+            <div class="logo-right">
+                <span class="layui-breadcrumb" lay-separator="|">
+                    <a href="#" style="color: #2eafbb !important;">登录</a>
+                    <a href="#" style="color: #666 !important;">注册</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="regist-content">
+        <div class="regist-tips">
+            <h2>“学信网账号”可用于登录学信网各服务平台</h2>
+            <div class="regist-tips-detail">
+                支持的平台有：<a href="https://my.chsi.com.cn/" target="_blank">学信档案</a>（含图像校对、学籍信息核对等）、<a href="https://yz.chsi.com.cn/" target="_blank">中国研究生招生信息网</a>、<a href="https://gaokao.chsi.com.cn/zzbm/" target="_blank">高考特殊类型招生报名平台</a>、<a href="https://www.gfbzb.gov.cn/" target="_blank">全国征兵网</a>、<a href="https://job.chsi.com.cn/" target="_blank">学信就业</a>、<a href="https://www.gatzs.com.cn/" target="_blank">内地（祖国大陆）高校面向港澳台招生信息网</a>、<a href="https://xz.chsi.com.cn/" target="_blank">学职平台</a>、<a href="https://www.ncss.cn/" target="_blank">国家大学生就业服务平台</a>、<a href="https://cy.ncss.cn/" target="_blank">全国大学生创业服务网</a>等。如果您在使用这些服务时注册过账号，则可凭此账号使用其他服务，例如：如果您进行过图像校对，则可凭此账号进行“研招网上报名”、“兵役登记”、“应征入伍”等，而无需再次注册账号。
+            </div>
+        </div>
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span class="required">*</span>手机号</label>
+                <div class="layui-input-inline layui-input-wrap">
+                <input type="text" name="mphone" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span class="required">*</span>密码</label>
+                <div class="layui-input-inline layui-input-wrap">
+                <input type="password" name="password" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span class="required">*</span>确认密码</label>
+                <div class="layui-input-inline layui-input-wrap">
+                <input type="password" name="repassword" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span class="required">*</span>姓名</label>
+                <div class="layui-input-inline layui-input-wrap">
+                <input type="text" name="name" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span class="required">*</span>证件类型</label>
+                <div class="layui-input-inline layui-input-wrap">
+                  <select name="credentialtype" lay-filter="aihao">
+                    <option value="0" selected>居民身份证</option>
+                    <option value="1">外国人永久居留身份证</option>
+                    <option value="2">港澳台身份证</option>
+                    <option value="3">华侨身份证/护照(无身份证者可填护照号)</option>
+                    <option value="4">其他</option>
+                  </select>
+                </div>
+                <div class="layui-form-mid layui-text-em">中国大陆地区用户推荐设置居民身份证。</div>
+            </div>  
+            <div class="layui-form-item">
+                <label class="layui-form-label"><span class="required">*</span>证件号码</label>
+                <div class="layui-input-inline layui-input-wrap">
+                <input type="text" name="idno" lay-verify="required" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline layui-input-wrap" style="width: 80%;">
+                    以下信息为选填项，忘记密码时可通过手机号找回密码
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">安全邮箱</label>
+                <div class="layui-input-inline layui-input-wrap">
+                <input type="text" name="email" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <input type="checkbox" name="agreement" lay-verify="required" lay-skin="primary" title="我已阅读并同意"> 
+                <a href="#" target="_blank" style="position: relative; top: 6px; left: -15px;"><ins>《用户协议》、</ins></a>
+                <a href="#" target="_blank" style="position: relative; top: 6px; left: -15px;"><ins>《隐私政策》</ins></a>
+                
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <div class="layui-input-inline layui-input-wrap">
+                    <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="demo-reg">立即注册</button>
+                </div>
+                
+              </div>
+        </form>
+    </div>
+    <div class="footer">
+        <a href="https://www.chsi.com.cn/" target="_blank">学信网</a>　|　<a
+            href="https://my.chsi.com.cn/archive/help/index.action" target="_blank">帮助中心</a>　|　Copyright © 2003-2025 学信网 All
+        Rights Reserved<br>
+        <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19004913号-1</a>　<a
+            href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747" target="_blank"><img
+                src="./学信档案_files/jgwab.svg" style="vertical-align: middle;margin-bottom: 2px;margin-left: 8px;">
+            京公网安备11010202009747号</a>
+    </div>
+    <script src="./layui/layui.js"></script>
+</body>
+</html>
