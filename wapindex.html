@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>登录_学信档案</title>
+        <link href="./layui/css/layui.css" rel="stylesheet">
+        <style>
+            .wapindex-header{
+                width: calc(100% - 30px);
+                height: 72px;
+                padding: 0 15px;
+            }
+            .wapindex-logo{
+                width: 70%;
+                height: 100%;
+                float: left;
+                background: url(./images/logo-index.png) no-repeat 0, center;
+                background-size: 190px 36px;
+            }
+            .wapindex-part1{
+                background: #d9eaf8;
+            }
+            .wapindex-part1 .title{
+                width: 100%;
+                height: 68px;
+                background: url(./images/index-title.png) no-repeat center center;
+                background-size: 280px 22px;
+                line-height: 68px;
+            }
+            .wapindex-part1 .btn{
+                width: 100%;
+                height: 44px;
+                text-align: center;
+            }
+            .wapindex-part1 .pic{
+                height: 255px;
+                background: url(./images/part1.png) no-repeat center center;
+                background-size: 375px 255px;
+            }
+            .wapindex-white{
+                background: #fff;
+            }
+            .wapindex-grey{
+                background: #f6f6f6;
+            }
+            .wapindex-grey .title,.wapindex-white .title{
+                color: #26b887;
+                line-height: 30px;
+                text-align: center;
+                padding: 17px 0;
+            }
+            .part2-pic{
+                width: 100%;
+                height: 172px;
+                background: url(./images/t11.png) no-repeat center center;
+                background-size: 200px 172px;
+            }
+            .part3-pic{
+                width: 100%;
+                height: 148px;
+                background: url(./images/t22.png) no-repeat center center;
+                background-size: 120px 148px;
+            }
+            .part4-pic{
+                width: 100%;
+                height: 190px;
+                background: url(./images/t33.png) no-repeat center center;
+                background-size: 190px 190px;
+            }
+            .part5-pic{
+                width: 100%;
+                height: 145px;
+                background: url(./images/t44.png) no-repeat center center;
+                background-size: 160px 145px;
+            }
+            .part6-pic{
+                width: 100%;
+                height: 163px;
+                background: url(./images/t55.png) no-repeat center center;
+                background-size: 260px 163px;
+            }
+            .part7-pic{
+                width: 100%;
+                height: 152px;
+                background: url(./images/t66.png) no-repeat center center;
+                background-size: 160px 152px;
+            }
+            .part8-pic{
+                width: 100%;
+                height: 142px;
+                background: url(./images/t77.png) no-repeat center center;
+                background-size: 169px 142px;
+            }
+            .part-text{
+                padding: 20px 28px;
+                font-size: 14px;
+                line-height: 18px;
+                color: gray;
+            }
+           .part-text-list{
+                padding: 15px 7px 20px 21px;
+                color: gray;
+            }
+            .part-text-list li{
+                position: relative;
+                line-height: 28px;
+                font-size: 14px;
+            }
+            .part-text-list p{
+                margin: 8px 0;
+                line-height: 18px;
+                padding-left: 12px;
+            }
+            .ul-tit{
+                color: gray;
+                padding: 0 10px 0 20px;
+            }
+            .wapindex-footer,.wapindex-footer a{
+                font-size: 14px;
+                color: #999;
+                text-align: center;
+                line-height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wapindex-header">
+            <div class="wapindex-logo"></div>
+        </div>
+        <div class="wapindex-part1">
+            <div class="title"></div>
+            <div class="btn">
+                <button type="button" class="layui-btn layui-btn-sm">登录学信档案</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary layui-border-green">注册学信网账号</button>
+            </div>
+            <div class="pic"></div>
+        </div>
+        <div class="wapindex-white">
+            <div class="title layui-font-20">免费查看学籍、学历、学位信息</div>
+            <div class="part2-pic"></div>
+            <p class="part-text">实名注册后即可免费查看本人的高等教育学籍、学历、学位、考研等信息。</p>
+        </div>
+        <div class="wapindex-grey">
+            <div class="title layui-font-20">校对本人学历照片</div>
+            <div class="part3-pic"></div>
+            <p class="part-text">学历照片很重要，及时校对很有必要。</p>
+        </div>
+        <div class="wapindex-white">
+            <div class="title layui-font-20">免费申请学籍、学历、学位<br>在线验证报告</div>
+            <div class="part4-pic"></div>
+            <ul class="part-text-list">
+                <li>
+                    <span class="layui-badge-dot layui-bg-green"></span>
+                    报告使用场景：
+                    <p>求职招聘、派遣接收、升学(考研、专升本)、出国留学、干部任免、职称评定、信用评估等。</p>
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    报告特点：
+                    <p>多次免费验证、多重防伪、多次打印。</p>
+                </li>
+            </ul>
+        </div>
+        <div class="wapindex-grey">
+            <div class="title layui-font-20">查看或绑定学历学位认证与成绩<br>验证报告</div>
+            <div class="part5-pic"></div>
+            <ul class="part-text-list">
+                <li>
+                    <span class="layui-badge-dot layui-bg-green"></span>
+                    《中国高等教育学历认证报告》
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    《中国中等教育学历验证报告》
+                </li>
+                <li>
+                    <span class="layui-badge-dot"></span>
+                    《中国高等学校学生成绩验证报告》
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-cyan"></span>
+                    《中国高等学校招生入学考试成绩验证报告》 
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-blue"></span>
+                    《中国中等学校学生成绩验证报告》
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-black"></span>
+                    《普通高中学业水平考试（会考）成绩验证报告》
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    《中国高等教育学位认证报告》
+                </li>
+            </ul>
+        </div>
+        <div class="wapindex-white">
+            <div class="title layui-font-20">向所申请的国外大学发送报告</div>
+            <div class="part6-pic"></div>
+            <p class="ul-tit">合作机构：</p>
+            <ul class="part-text-list">
+                <li>
+                    <span class="layui-badge-dot layui-bg-green"></span>
+                    美国大学网ApplyWeb
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    美国Parchment
+                </li>
+                <li>
+                    <span class="layui-badge-dot"></span>
+                    美国学生信息中心NSC
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-cyan"></span>
+                    爱尔兰Digitary 
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-blue"></span>
+                    荷兰DUO
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-black"></span>
+                    World Education Services (WES)
+                </li>
+            </ul>
+        </div>
+        <div class="wapindex-grey">
+            <div class="title layui-font-20">参与调查问卷和投票</div>
+            <div class="part7-pic"></div>
+            <ul class="part-text-list">
+                <li>
+                    <span class="layui-badge-dot layui-bg-green"></span>
+                    对所读大学的优势专业进行投票推荐
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    对就读大学和就读专业进行满意度的评价
+                </li>
+                <li>
+                    <span class="layui-badge-dot"></span>
+                    对就业状况进行反馈
+                </li>
+            </ul>
+        </div>
+        <div class="wapindex-white">
+            <div class="title layui-font-20">享受教育部大学生职业网<br> （新职业）的求职招聘服务</div>
+            <div class="part8-pic"></div>
+            <ul class="part-text-list">
+                <li>
+                    <span class="layui-badge-dot layui-bg-green"></span>
+                    更真实的“职位库”，为你量身推荐，与众不同、独一无二 
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-orange"></span>
+                    更优质的“企业库”，由你徜徉梦想天空，官方独有标签加持 
+                </li>
+                <li>
+                    <span class="layui-badge-dot"></span>
+                    更大型的“招聘会”，为你提供最多沟通机会，多部委、省市、高校联办 
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-cyan"></span>
+                    更独家的“师兄师姐去哪儿”，揭秘同学校同专业前辈们的就业方向  
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-blue"></span>
+                    更官方的“推荐指数”，为你评估与心仪企业的匹配度
+                </li>
+                <li>
+                    <span class="layui-badge-dot layui-bg-black"></span>
+                    更接地气的“面试经验”，真实反映心仪职位的面试要点与实地体验
+                </li>
+            </ul>
+        </div>
+        <div class="wapindex-part1">
+            <div class="title" style="background: none;">
+                <h3 style="text-align: center;">现在就开始学习使用档案</h3>
+            </div>
+            <div class="btn">
+                <button type="button" class="layui-btn layui-btn-sm">登录学信档案</button>
+                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary layui-border-green">注册学信网账号</button>
+            </div>
+        </div>
+        <div class="wapindex-footer">
+            <a href="login.html" target="_blank">学信网</a>　|　<a href="login.html" target="_blank">帮助中心</a>
+            <p>Copyright © 2003-2025 学信网 All Rights Reserved</p>
+            <p><a href="https://beian.miit.gov.cn/" target="_blank">京ICP备19004913号-1</a></p>
+            <p>
+                <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202009747" target="_blank"><img src="./学信档案_files/jgwab.svg" style="vertical-align: middle;margin-bottom: 2px;margin-left: 8px;">京公网安备11010202009747号</a>
+            </p>
+        </div>
+        <script src="./layui/layui.js"></script>
+    </body>
+</html>
