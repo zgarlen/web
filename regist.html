@@ -99,6 +99,44 @@
             height: 80px;
             padding-top: 16px;
         }
+        @media screen and (max-width: 768px) {
+            body{
+                background: #fff;
+            }
+            .logo-right,.footer,.regist-tips{
+                display: none;
+            }
+            .regist-header .login-logo{
+                left: calc((100% - 166px)/2);
+            }
+            .regist-content form{
+                width: 100%;
+                margin-left: 0;
+            }
+            .regist-content{
+                width: 90%;
+                border: 0;
+            }
+            .layui-form-label{
+                text-align: left;
+            }
+            .regist-optional label{
+                display: none;
+            }
+            .layui-form-label{
+                padding: 0;
+            }
+            .layui-form-item .layui-input-inline+.layui-form-mid{
+                margin-left: 0;
+            }
+            .layui-form-item .layui-input-inline{
+                margin-left: 0;
+            }
+            .layui-form-select .layui-edge{
+                margin-top: 0;
+                top: 62%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -166,9 +204,9 @@
                 <input type="text" name="idno" lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
-            <div class="layui-form-item">
+            <div class="layui-form-item regist-optional">
                 <label class="layui-form-label"></label>
-                <div class="layui-input-inline layui-input-wrap" style="width: 80%;">
+                <div class="layui-input-inline" style="width: 80%;">
                     以下信息为选填项，忘记密码时可通过手机号找回密码
                 </div>
             </div>
