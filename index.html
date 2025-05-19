@@ -69,7 +69,7 @@
         .part1 {
             position: relative;
             min-height: 650px;
-            background: #D9EAF8;
+            background: #D9EAF8 url(./images/part1_bg.png) repeat-x 0 586px;
             display: flex;
         }
         
@@ -82,13 +82,47 @@
         }
         
         .part1 .index-p1-img {
-            height: auto;
+            height: 410px;
             padding: 60px 20px;
             text-align: center;
+            background: url(./images/index-part1.png) no-repeat center 60px;
+            background-size: 100%;
         }
+        .part-animation .part1-person {
+            position: absolute;
+            width: 487px;
+            height: 277px;
+            top: 316px;
+            right: 334px;
+            background: url(./images/part1-person.png) no-repeat;
+            /* 初始状态 */
+            transform: translate(334px, -316px) rotate(-30deg) scale(0);
+            
+            /* 定义动画 */
+            animation: personMove 1s ease forwards;
+            
+            /* 性能优化 */
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+        @keyframes personMove {
+            from {
+                transform: translate(334px, -316px) rotate(-30deg) scale(0);
+            }
+            to {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+        }
+        /*.part-animation .part1-person {
+            transform: translate(334px, -316px) rotate(-30deg) scale(0);
+        }
+8
+        .part-animation .part1-person {
+            transform: translate(0,0) rotate(0deg) scale(1);
+        }*/
         
         /* 添加媒体查询以适应不同屏幕尺寸 */
-        @media (max-width: 768px) {
+        /*@media (max-width: 768px) {
             .index-header .index-block {
                 flex-direction: column;
                 text-align: center;
@@ -122,7 +156,7 @@
             .part1-title {
                 margin-top: 30px;
             }
-        }
+        }*/
     .layui-breadcrumb a {
             color: #666 !important;
         }
@@ -137,6 +171,26 @@
             overflow: hidden;
             background: url(./images/part3-bg.png) no-repeat center center;
             float: left;
+        }
+        .part2 .part2-wz {
+            position: absolute;
+            width: 235px;
+            height: 156px;
+            top: 47%;
+            left: 17%;
+            background: url(./images/part2-wz.png) no-repeat center center;
+            transform: scale(0);
+            
+            /* 定义动画 */
+            animation: tran 2s ease-in forwards;
+        }
+        @keyframes tran {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
         }
         .part2 .right {
             width: 470px;
@@ -159,11 +213,156 @@
             -webkit-background-size: 100% 100%;
                     background-size: 100%;
         }
+        .part3-round {
+            position: absolute;
+            width: 134px;
+            height: 141px;
+            top: 440px;
+            right: -32px;
+            background: url(./images/part3-round.png) no-repeat center center;
+            transform: scale(0);
+            
+            /* 定义动画 */
+            animation: tran  1s ease forwards;
+        }
+        
+        .part3-right {
+            position: absolute;
+            width: 77px;
+            height: 55px;
+            top: 482px;
+            right: -5px;
+            background: url(./images/part3-right.png) no-repeat center center;
+            transform: scale(0);
+            
+            /* 定义动画 */
+            animation: tran  1s ease forwards;
+        }
+        @keyframes tran  {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+
+        }
         .part4 .left{
             width: 500px;
             height: 510px;
             float: left;
+            position: relative;
             background: url(./images/part4.png) no-repeat 122px 153px;
+        }
+        .part4 .part4-r {
+        position: absolute;
+        width: 98px;
+        height: 98px;
+        z-index: 2;
+        transform: scale(0);
+        }
+        .part4 .part4-r1 {
+        top: 30px;
+        left: 305px;
+        background: url(./images/part41.png) no-repeat;
+        animation: tran 0.2s ease forwards;
+        }
+        .part4 .part4-r2 {
+        top: 183px;
+        left: 400px;
+        background: url(./images/part42.png) no-repeat;
+        animation: tran 0.2s ease 0.4s forwards;
+        }
+        .part4 .part4-r3 {
+        top: 352px;
+        left: 342px;
+        background: url(./images/part43.png) no-repeat;
+            animation: tran 0.2s ease 0.8s forwards;
+        }
+        .part4 .part4-r4 {
+        top: 411px;
+        left: 172px;
+        background: url(./images/part44.png) no-repeat;
+        animation: tran 0.2s ease 1.2s forwards;
+        }
+        .part4 .part4-r5 {
+        top: 315px;
+        left: 19px;
+        background: url(./images/part45.png) no-repeat;
+            animation: tran 0.2s ease 1.6s forwards;
+        }
+        .part4 .part4-r6 {
+        top: 137px;
+        left: 0;
+        background: url(./images/part46.png) no-repeat;
+            animation: tran 0.2s ease 2.0s forwards;
+        }
+        .part4 .part4-r7 {
+        top: 10px;
+        left: 127px;
+        background: url(./images/part47.png) no-repeat;
+            animation: tran 0.2s ease 2.4s forwards;
+        }
+        .part4 .part4-line {
+        position: absolute;
+        z-index: 2;
+        transform: scale(0);
+        }
+        .part4 .part4-l1 {
+        width: 45px;
+        height: 69px;
+        top: 120px;
+        left: 380px;
+        background: url(./images/part411.png) no-repeat;
+        animation: tran 0.2s ease 0.6s forwards;
+        }
+        .part4 .part4-l2 {
+        width: 28px;
+        height: 77px;
+        top: 280px;
+        left: 411px;
+        background: url(./images/part421.png) no-repeat;
+        animation: tran 0.2s ease 1.0s forwards;
+        }
+        .part4 .part4-l3 {
+        width: 77px;
+        height: 28px;
+        top: 418px;
+        left: 267px;
+        background: url(./images/part431.png) no-repeat;
+        animation: tran 0.2s ease 1.4s forwards;
+        }
+        .part4 .part4-l4 {
+        width: 71px;
+        height: 45px;
+        top: 390px;
+        left: 108px;
+        background: url(./images/part441.png) no-repeat;
+        animation: tran 0.2s ease 1.8s forwards;
+        }
+        .part4 .part4-l5 {
+        width: 12px;
+        height: 80px;
+        top: 235px;
+        left: 54px;
+        background: url(./images/part451.png) no-repeat;
+        animation: tran 0.2s ease 2.2s forwards;
+        }
+        .part4 .part4-l6 {
+        width: 58px;
+        height: 58px;
+        top: 92px;
+        left: 82px;
+        background: url(./images/part461.png) no-repeat;
+        animation: tran 0.2s ease 2.6s forwards;
+        }
+        .part4 .part4-l7 {
+        width: 80px;
+        height: 12px;
+        top: 65px;
+        left: 225px;
+        background: url(./images/part471.png) no-repeat;
+        animation: tran 0.2s ease 3.0s forwards;
         }
         .part4 .right{
             margin-top: 106px;
@@ -179,6 +378,32 @@
             width: 377px;
             height: 510px;
             background: url(./images/part5.png) no-repeat center center;
+        }
+        .part5 .part51 {
+            position: absolute;
+            width: 116px;
+            height: 145px;
+            top: 148px;
+            right: 0px;
+            background: url(./images/part51.png) no-repeat;
+            animation: part51 1s ease forwards;
+        }
+        .part5 .part52 {
+            position: absolute;
+            width: 61px;
+            height: 50px;
+            top: 182px;
+            right: 27px;
+            background: url(./images/part52.png) no-repeat;
+            animation: tran 1s linear forwards;
+        }
+        @keyframes part51  {
+             0% { transform: rotate(0deg);}
+             25% { transform: rotate(30deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-30deg); }
+            100% { transform: rotate(0deg); }
+
         }
         .part6 .left {
             float: left;
@@ -207,6 +432,32 @@
             -webkit-background-size: 100% 100%;
                     background-size: 100%;
             float: right;
+            position: relative;
+        }
+        .part7 .checkbox {
+            position: absolute;
+            left: 130px;
+            top: 186px;
+            width: 12px;
+            height: 12px;
+            background: url(./images/checkbox.png) no-repeat;
+            transform: scale(0);
+            animation: tran 0.5s ease 1s forwards;
+        }
+        .part7 .pen {
+            position: absolute;
+            left: 268px;
+            top: 222px;
+            width: 106px;
+            height: 134px;
+            background: url(./images/pen.png) no-repeat;
+            animation: part7pen 2s ease-in;
+        }
+        @keyframes part7pen  {
+             0% {left: 268px;top: 242px;}
+             40% {left: 134px;top: 189px;}
+            100% {left: 268px;top: 222px;}
+
         }
         .part8 .left {
             width: 404px;
@@ -272,17 +523,17 @@
 
     <div class="layui-carousel" id="ID-carousel-demo-set" lay-filter="filter-demo-carousel-set">
         <div carousel-item>
-            <div class="page">
+            <div class="page part-animation">
                 <div class="index-header">
                     <div class="index-block">
                         <div class="logo"></div>
-                        <div class="index-right">
+                        <!-- <div class="index-right">
                             <span class="layui-breadcrumb" lay-separator="|">
                                 <a href="login.html">学信网</a>
                                 <a href="login.html">帮助中心</a>
                                 <a href="login.html">联系我们</a>
                             </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="part1">
@@ -291,14 +542,17 @@
                         <div class="index-p1-img atn">
                             <button type="button" class="layui-btn layui-btn-lg">登录学信档案</button>
                             <button type="button" class="layui-btn layui-btn-lg layui-btn-primary layui-border-green">注册学信网账号</button>
-                
+                            <button type="button" class="layui-btn layui-btn-lg" style="display: none;">进入学信档案</button>
                         </div>
+                        <div class="part1-person"></div>
                     </div>
                 </div>
             </div>
             <div class="page">
                 <div class="layui-container part part2">
-                        <div class="left"></div>
+                        <div class="left">
+                            <div class="part2-wz"></div>
+                        </div>
                         <div class="right">
                             <h4><a href="login.html">免费查看学籍、学历、学位信息</a></h4>
                             <p>实名注册后即可免费查看本人的高等教育学籍、<br>学历、学位、考研等信息。</p>
@@ -313,15 +567,33 @@
                         <h4><a href="login.html">校对本人学历照片</a></h4>
                         <p>学历照片很重要，及时校对很有必要。</p>
                     </div>
-                    <div class="right"></div>
+                    <div class="right">
+                        <div class="part3-round"></div>
+                        <div class="part3-right"></div>
+                    </div>
                 </div>
             </div>
             <div class="page">
                 <div class="layui-container part part4">
                     
-                    <div class="left"></div>
+                    <div class="left">
+                        <div class="part4-r part4-r1"></div>
+                        <div class="part4-line part4-l1"></div>
+                        <div class="part4-r part4-r2"></div>
+                        <div class="part4-line part4-l2"></div>
+                        <div class="part4-r part4-r3"></div>
+                        <div class="part4-line part4-l3"></div>
+                        <div class="part4-r part4-r4"></div>
+                        <div class="part4-line part4-l4"></div>
+                        <div class="part4-r part4-r5"></div>
+                        <div class="part4-line part4-l5"></div>
+                        <div class="part4-r part4-r6"></div>
+                        <div class="part4-line part4-l6"></div>
+                        <div class="part4-r part4-r7"></div>
+                        <div class="part4-line part4-l7"></div>
+                    </div>
                     <div class="right">
-                        <h4 style="line-height: 45px;margin-bottom: 15px;"><a href="login.html">免费申请学籍、学历、学位<br>在线验证报告</a></h4>
+                        <h4 style="line-height: 45px;margin-bottom: 15px;"><a href="#">免费申请学籍、学历、学位<br>在线验证报告</a></h4>
                         <p><span class="spot-blue">&nbsp;</span>报告使用场景：</p>
                         <p>求职招聘、派遣接收、升学(考研、专升本)、出国留学、</p>
                         <p>干部任免、职称评定、信用评估等。</p>
@@ -334,7 +606,7 @@
                 <div class="layui-container part part5">
                     
                     <div class="left" style="width: 580px;margin-top:50px;">
-                        <h4><a href="login.html">查看或绑定学历学位认证与成绩验证报告</a></h4>
+                        <h4><a href="#">查看或绑定学历学位认证与成绩验证报告</a></h4>
                         <p><span class="layui-badge-dot"></span>&nbsp;《中国高等教育学历认证报告》</p>
                         <p><span class="layui-badge-dot layui-bg-orange"></span>&nbsp;《中国中等教育学历验证报告》</p>
                         <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;《中国高等学校学生成绩验证报告》</p>
@@ -343,7 +615,10 @@
                         <p><span class="layui-badge-dot layui-bg-black"></span>&nbsp;《普通高中学业水平考试（会考）成绩验证报告》</p>
                         <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;《中国高等教育学位认证报告》</p>
                     </div>
-                    <div class="right"></div>
+                    <div class="right">
+                        <div class="part51"></div>
+                        <div class="part52"></div>
+                    </div>
                 </div>
             </div>
             <div class="page">
@@ -351,7 +626,7 @@
                     
                     <div class="left"></div>
                     <div class="right">
-                        <h4><a href="login.html">向所申请的国外大学发送报告</a></h4>
+                        <h4><a href="#">向所申请的国外大学发送报告</a></h4>
                         <p>合作机构：</p>
                         <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;美国大学网ApplyWeb</p>
                         <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;美国Parchment</p>
@@ -366,12 +641,15 @@
                 <div class="layui-container part part7">
                     
                     <div class="left">
-                        <h4><a href="login.html">参与调查问卷和投票</a></h4>
+                        <h4><a href="#">参与调查问卷和投票</a></h4>
                         <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;对所读大学的优势专业进行投票推荐</p>
                         <p><span class="layui-badge-dot layui-bg-orange"></span>&nbsp;对就读大学和就读专业进行满意度的评价</p>
                         <p><span class="layui-badge-dot"></span>&nbsp;对就业状况进行反馈</p>
                     </div>
-                    <div class="right"></div>
+                    <div class="right">
+                        <div class="checkbox"></div>
+                        <div class="pen"></div>
+                    </div>
                 </div>
             </div>
             <div class="page" style="height: 0;">条目5</div>
@@ -379,7 +657,7 @@
                 <div class="layui-container part part8">
                     <div class="left"></div>
                     <div class="right">
-                        <h4 style="line-height: 45px;"><a href="login.html" target="_blank">享受教育部大学生职业网（新职业）<br>的求职招聘服务</a></h4>
+                        <h4 style="line-height: 45px;"><a href="#" target="_blank">享受教育部大学生职业网（新职业）<br>的求职招聘服务</a></h4>
                         <p><span class="layui-badge-dot layui-bg-blue"></span>&nbsp;更真实的“职位库”，为你量身推荐，与众不同、独一无二</p>
                         <p><span class="layui-badge-dot layui-bg-cyan"></span>&nbsp;更优质的“企业库”，由你徜徉梦想天空，官方独有标签加持</p>
                         <p><span class="layui-badge-dot layui-bg-green"></span>&nbsp;更大型的“招聘会”，为你提供最多沟通机会，多部委、省市、高校联办</p>
@@ -394,6 +672,7 @@
                     
                         <button type="button" class="layui-btn layui-btn-lg" style="background-color: #fff; color:#26b887">登录学信档案</button>
                         <button type="button" class="layui-btn layui-btn-lg" style="background-color: #26b887; color:#fff;border:1px #fff solid">注册学信网账号</button>
+                        <button type="button" class="layui-btn layui-btn-lg" style="background-color: #fff; color:#26b887;display:none">进入学信档案</button>
                     
                     </div>
                     <div class="footer">
@@ -471,7 +750,7 @@
                 if (targetIndex != 7) {
                     inst.goto(targetIndex);
                 }else{
-                    window.location.href="login.html"
+                    window.location.href="#"
                 }
             });
             

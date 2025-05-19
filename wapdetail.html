@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <style>
+        body{
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .wapinfo-header {
+            position: relative;
+            height: 36px;
+            background: #fff;
+            text-align: center;
+            line-height: 36px;
+        }
+
+        .wapinfo-header .logo {
+            display: inline-block;
+            width: 95px;
+            height: 18px;
+            margin-top: 9px;
+            background: url(./images/logo-info.png) no-repeat;
+            background-size: 100% 100%;
+            margin-left: calc((100% - 95px)/2);
+        }
+
+        .layui-collapse {
+            width: 95%;
+            margin: 0 auto;
+            border: 0;
+        }
+
+        .layui-colla-item {
+            border: 0;
+        }
+
+        .type-title {
+            font-size: 14px;
+            height: 14px;
+            line-height: 14px;
+            padding: 10px;
+        }
+
+        .layui-colla-title {
+            height: auto;
+            border-radius: 9px;
+            color: #fff;
+            padding:0 20px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .title-green {
+            background: linear-gradient(90deg, #1faf7f, #3fcb92);
+        }
+
+        .title-blue {
+            background: linear-gradient(90deg, #3886f3, #5daaf8);
+        }
+
+        .title-orange {
+            background: linear-gradient(90deg, #FF8C00, #FFD700);
+        }
+
+        .title-white {
+            background: white;
+            color: #000;
+            border: 1px solid #e6e6e6;
+        }
+
+        .layui-colla-title .layui-icon {
+            display: none;
+        }
+
+        .userinfo {
+            width: 100%;
+            height: 85px;
+            padding-top: 10px;
+        }
+        .layui-colla-content{
+            display: block !important;
+        }
+
+        .userinfo-pic {
+
+            width: auto;
+            float: left;
+        }
+
+        .pic-info {
+            float: left;
+            font-size: 10px;
+            line-height: 18px;
+            margin-right: 10px;
+        }
+
+        .userinfo-name {
+            float: left;
+        }
+
+        .no-message,
+        .schoolname {
+            width: 100%;
+            height: 45px;
+        }
+
+        .no-message {
+            text-align: center;
+        }
+
+        .errtips {
+            text-align: center;
+            line-height: 16px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .schoolname .name {
+            font-size: 20px;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .schoolname .info {
+            font-size: 14px;
+            margin-top: 20px;
+            float: right;
+            border-radius: 10px;
+            padding: 0 13px;
+            line-height: 22px;
+        }
+
+        .info-green {
+            background-color: #1da36e;
+        }
+
+        .info-blue {
+            background-color: #2b77c7;
+        }
+
+        .info-orange {
+            background-color: #ff9d00;
+        }
+
+        .schoolinfo {
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+            line-height: 30px;
+            float: left;
+        }
+
+        .layui-form-label {
+            color: #999;
+            width: 90px;
+        }
+
+        .layui-colla-content {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .layui-colla-content .layui-form-item {
+            margin-bottom: 0;
+        }
+
+        .layui-colla-content .layui-form-item .layui-input-inline {
+            margin-bottom: 0 !important;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="wapinfo-header">
+        <i class="layui-icon layui-icon-return" style="float: left; margin-left: 2.5%" id="backBtn"></i>
+        <div style="float: left;margin-left: calc((100% - 95px)/2);">高等学籍</div>
+        <!-- <i class="layui-icon layui-icon-logout" style="color: #fff;margin-top: 10px;float: right;margin-right:20px"></i> -->
+    </div>
+    <div class="layui-collapse" lay-filter="filter-collapse">
+        <div class="layui-colla-item">
+            <div class="layui-colla-title title-green">
+                <div class="userinfo">
+                    <div class="userinfo-pic">
+                        <div class="pic-info">
+                            <img src="./images/template.png" width="48" height="64">
+                            <div>录取照片</div>
+                        </div>
+                        <div class="pic-info">
+                            <img src="./images/template.png" width="48" height="64">
+                            <div>毕业照片</div>
+                        </div>
+                        
+                    </div>
+                    <div class="userinfo-name">
+                        <div class="layui-font-20">XXX</div>
+                        <div class="layui-font-14" style="line-height: 14px;">男&nbsp;&nbsp;&nbsp;&nbsp;1999年9月9日</div>
+                    </div>
+                </div>
+                <div class="schoolname">
+                    <div class="name">广东XX职业技术学院</div>
+                    <div class="info info-green">专科</div>
+                </div>
+                <div class="schoolinfo">通信技术&nbsp;&nbsp;|&nbsp;&nbsp;普通全日制</div>
+            </div>
+            <div class="layui-colla-content">
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">民族</label>
+                        <div class="layui-input-inline layui-input-wrap">汉族</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">证件号码</label>
+                        <div class="layui-input-inline layui-input-wrap">111111111111111111</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学制</label>
+                        <div class="layui-input-inline layui-input-wrap">3年</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学历类别</label>
+                        <div class="layui-input-inline layui-input-wrap">普通高等教育</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">分院</label>
+                        <div class="layui-input-inline layui-input-wrap"></div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">系所</label>
+                        <div class="layui-input-inline layui-input-wrap"></div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">班级</label>
+                        <div class="layui-input-inline layui-input-wrap"></div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学号</label>
+                        <div class="layui-input-inline layui-input-wrap">1210427036</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">入学日期</label>
+                        <div class="layui-input-inline layui-input-wrap">2012年1月1日</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">学籍状态：</label>
+                        <div class="layui-input-inline layui-input-wrap">不在籍（毕业）</div>
+                    </div>
+                </div>
+                <div class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">离校日期</label>
+                        <div class="layui-input-inline layui-input-wrap">2012年1月1日</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+    <script src="./layui/layui.js"></script>
+    <script>
+        layui.use(function () {
+            var $ = layui.$;
+
+            // 绑定点击事件
+            $('#backBtn').on('click', function () {
+                // 返回上一页
+                window.history.back();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo</title>
+    <link href="./layui/css/layui.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .ui-header {
+            height: 67px;
+            background: #fff;
+            border-top: 1px solid #ededed;
+            border-bottom: 1px solid #ededed;
+        }
+        .ui-header{
+            width: 100%;
+        }
+        .header-main{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .ui-logo{
+            height: 33px;
+            width: 166px;
+            background-image: url(./images/logo.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-top: 17px;
+            float: left;
+        }
+        .layui-panel{
+            width: 80%;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ededed;
+            margin-top: 20px;
+            padding: 30px;
+        }
+        .zhwsd-container{
+            width: 96%;
+            position: relative;
+            min-height: 40px;
+            line-height: 40px;
+            padding: 0 2%;
+        }
+        .layui-progress{
+            width: 77%;
+            border-radius: 0;
+            height: 10px;
+            margin: 0 auto;
+            margin-top: -24px;
+        }
+        .layui-progress-bar{
+            background-color: #2eafbb;
+            border-radius: 0;
+            height: 10px!important;
+        }
+        .zhwsd{
+            background: #f5f5f5;
+            padding: 20px 0 ;
+        }
+        .zhwsd-per{
+            font-size:34px;
+            float: right;
+            color:#2eafbb;
+        }
+        .zhwsd-tips{
+            width: 96%;
+            padding: 0 2%;
+            color: #999999;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .zhsz-list li {
+            line-height: 60px;
+            border-top: 1px solid #ededed;
+        }
+        .zhsz-list h4 {
+            display: inline-block;
+            vertical-align: top;
+            color: #333333;
+            font-size: 16px;
+            margin-left: 15px;
+            font-weight: 400;
+            width: 150px;
+        }
+        @media screen and (max-width: 768px) {
+            body{
+                background-color: #fff;
+            }
+            .header-main{
+                width: 100%;
+            }
+            .ui-logo{
+                margin-left: 2%;
+            }
+            .layui-panel{
+                padding: 0 2%;
+                border: 0;
+                width: 96%;
+            }
+            .layui-progress{
+                width: 96%;
+                margin-top: 10px;
+            }
+            .zhwsd-per{
+                font-size: 20px;
+            }
+            .zhsz-list li{
+                font-size: 32px;
+                padding: 10px 0;
+            }
+            .zhsz-list .phone-en-msg{
+                display: block;
+                width: 100%;
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ui-header">
+        <div class="header-main">
+            <div class="ui-logo"></div>
+        </div>
+    </div>
+    <div class="layui-panel">
+        <div class="zhwsd">
+            <div class="zhwsd-container">
+                <span style="float: left;" class="layui-font-20">账号完善度</span>
+                <span class="zhwsd-per">100%</span>
+            </div>
+            <div class="layui-progress layui-progress-big">
+                <div class="layui-progress-bar" lay-percent="100%"></div>
+            </div>
+            <div class="layui-font-14 zhwsd-tips">建议您完善学信网账号信息，以便于进行研招推免/统考、自主招生、兵役登记/应征报名、大创网等系统的相关操作。</div>
+        </div>
+        <ul class="zhsz-list">
+            <li class="clearfix">
+                <i class="layui-icon layui-icon-ok-circle" style="color: #48b325; font-size:20px"></i>
+                <h4>手机号<span style="color: #2eafbb;">（已绑定）</span></h4>
+                <strong>185****6564&nbsp;&nbsp;&nbsp;</strong>
+                <span style="color: #666666;" class="phone-en-msg">(仅绑定大陆地区手机的用户可进行图像校对、学籍/学历核验)</span>
+            </li>
+        </ul>
+        
+    </div>
+
+    <script src="./layui/layui.js"></script>
+</body>
+</html>

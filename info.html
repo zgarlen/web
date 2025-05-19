@@ -27,23 +27,40 @@
                 background-repeat: no-repeat;
                 background-position: 0;
                 position: relative;
-                overflow: hidden
+                overflow: hidden;
+                text-align: center;
             }
             .layui-tab .layui-tab-title{
-                width: 500px;
-                height: 80px;
-                float: left;
-                line-height: 80px;
-                margin-left: 20%;
+                padding-left: 10%;
+            }
+            .layui-tab-title li{
+                color: #666;
             }
             .layui-tab-title li:hover, .layui-btn:hover{
-                color: #fff;
+                color: #25b887;
             }
             .layui-tab-title .layui-this{
-                color: #fff;
+                color: #25b887;
             }
             .layui-tab-title .layui-this:after{
                 border: 0;
+            }
+            .vote_part{
+                padding: 20px 10%;
+                display: flex;
+                justify-content: space-between;
+                background: #f1f1f1;
+            }
+            .vote_part a {
+                display: inline-block;
+                width: 580px;
+                height: 80px;
+                color: #fff;
+                font-size: 26px;
+                line-height: 80px;
+                text-align: center;
+                letter-spacing: 2px;
+                font-weight: 700;
             }
             .layui-btn{
                 float: right;
@@ -58,7 +75,7 @@
                 width: 100%;
                 height: calc(100vh - 160px);
                 background: #f1f1f1;
-                padding-top: 15px;
+                padding: 0;
 
             }
             .layui-tab-item{
@@ -191,13 +208,10 @@
         <div class="layui-tab">
             <div class="header">
                 <div class="header-main">
-                    <div class="info-logo"></div>
-                    <ul class="layui-tab-title">
-                        <li class="layui-this">学籍信息/图像校对</li>
-                        <li>学历信息</li>
-                        <li>学位信息</li>
-                        <li>考研信息</li>
-                    </ul>
+                    <div class="info-logo">
+                        <i class="layui-icon layui-icon-triangle-d" style="font-size: 30px; color: #fff;transform: rotate(180deg);display: inline-block;margin-top:59px"></i>
+                    </div>
+                   
                     <button class="layui-btn layui-btn-primary demo-dropdown-base" style="float: right;">
                         <i class="layui-icon layui-icon-username"></i>
                         <span>个人中心</span>
@@ -206,6 +220,16 @@
                 </div>
                 
             
+            </div>
+            <ul class="layui-tab-title">
+                <li class="layui-this">学籍信息/图像校对</li>
+                <li>学历信息</li>
+                <li>学位信息</li>
+                <!-- <li>考研信息</li> -->
+            </ul>
+            <div class="vote_part">
+                <a href="#" style="background: url(./images/vote_bg_jygz.jpg);width:49%;">高校毕业生调查问卷</a>
+                <a href="#" style="background: url(./images/vote_bg_zymyd.png);width:49%;margin-left:2%"></a>
             </div>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
@@ -343,6 +367,47 @@
                     </div>
                 </div>
                 <div class="layui-tab-item">
+                    <div class="content-title">专科-广东XX职业技术学院-通信技术</div>
+                    <div class="content-info">
+                        <div class="info-pic">
+                            <div class="pic">
+                                <img src="./images/template.png" width="120" height="160" align="absmiddle" alt="毕业照片">
+                            </div>
+                        </div>
+                        <div class="info-text">
+                            <table class="text-table">
+                                <tbody>
+                                    <tr>
+                                        <th width="130">姓名：</th>
+                                        <td width="206">XXX</td>
+                                        <th width="100">性别：</th>
+                                        <td>男</td>
+                                    </tr>
+                                    <tr>
+                                        <th>出生日期：</th>
+                                        <td>1993年1月1日</td>
+                                        <th>获学位日期：</th>
+                                        <td>1993年01月01日</td>
+                                    </tr>
+                                    <tr>
+                                        <th>学位授予单位：</th>
+                                        <td>广东XX学院</td>
+                                        <th>所授学位：</th>
+                                        <td>管理学学士学位</td>
+                                    </tr>
+                                    <tr>
+                                        <th>学科/专业：</th>
+                                        <td>通信技术</td>
+                                        <th>学位证书编号：</th>
+                                        <td>111111111111111111</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="layui-tab-item">
                     <div class="no-info">
                         <div class="no-info-center">
                             <h5 class="layui-font-18">您还未绑定学位信息，可以使用“尝试绑定学位”功能绑定您的学位</h5>
@@ -365,15 +430,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="layui-tab-item" style="min-height: 290px;">
+                </div> -->
+                <!-- <div class="layui-tab-item" style="min-height: 290px;">
                     <div class="no-info">
                         <div class="no-info-center">
                             <h5 class="layui-font-20">您没有考研信息！</h5>
                             <p>您目前没有考研信息，系统提供2006年以来入学的硕士研究生报名和成绩数据。</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             
             
