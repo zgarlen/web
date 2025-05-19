@@ -19,6 +19,13 @@
         .ui-header{
             width: 100%;
         }
+        .uh-right{
+            float: right;
+            margin-top: 30px;
+        }
+        .uh-menu{
+            display: none;
+        }
         .header-main{
             width: 80%;
             margin: 0 auto;
@@ -48,7 +55,7 @@
             padding: 0 2%;
         }
         .layui-progress{
-            width: 77%;
+            width: 70%;
             border-radius: 0;
             height: 10px;
             margin: 0 auto;
@@ -72,7 +79,7 @@
             width: 96%;
             padding: 0 2%;
             color: #999999;
-            margin-top: 10px;
+            margin-top: 20px;
             text-align: left;
         }
         .zhsz-list li {
@@ -88,15 +95,56 @@
             font-weight: 400;
             width: 150px;
         }
+        .zhsz-list .zl-right{
+            float: right;
+        }
+        .zhsz-list .zl-right a{
+            color: #2EAFBB;
+        }
+        .required{
+            color: #e85759;
+            vertical-align: inherit;
+        }
+        .layui-form-item .layui-input-inline{
+            width: 230px;
+        }
+        .layui-form-label{
+            width: 150px;
+        }
+        .layui-input-block{
+            line-height: 20px;
+        }
+        
         @media screen and (max-width: 768px) {
             body{
                 background-color: #fff;
             }
+
             .header-main{
                 width: 100%;
             }
             .ui-logo{
                 margin-left: 2%;
+            }
+            .uh-right{
+                display: none;
+            }
+            .uh-menu{
+                display: block;
+                margin-top: 25px;
+                float: right;
+                margin-right:10px;
+            }
+            .layui-nav .layui-nav-item{
+                line-height: normal;
+            }
+            .layui-nav{
+                padding: 0;
+                background: none;
+            }
+            .layui-nav-child{
+                top: 36px!important;
+                left: -66px !important;
             }
             .layui-panel{
                 padding: 0 2%;
@@ -111,13 +159,42 @@
                 font-size: 20px;
             }
             .zhsz-list li{
-                font-size: 32px;
+                line-height: 32px;
                 padding: 10px 0;
             }
             .zhsz-list .phone-en-msg{
                 display: block;
                 width: 100%;
-                font-size: 24px;
+                line-height: 24px;
+            }
+            .zhsz-list .zl-right{
+                display: block;
+                text-align: right;
+                float: none;
+            }
+
+            .layui-form-item .layui-form-label{
+                overflow: unset;
+                padding-left: 0;
+            }
+            .layui-form-item .layui-input-inline+.layui-form-mid{
+                margin-left: 0;
+            }
+            .layui-form-item .layui-input-inline{
+                margin-left: 0;
+            }
+            .layui-form-item .layui-input-block{
+                margin-left: 0;
+                padding-left: 50%;
+            }
+            .layui-form-select .layui-edge{
+                top: 74%;
+            }
+            .layui-form-label{
+                text-align: left;
+            }
+            .layui-input-wrap .layui-input-prefix+.layui-input{
+                    padding-left: 10px;
             }
         }
     </style>
@@ -126,6 +203,22 @@
     <div class="ui-header">
         <div class="header-main">
             <div class="ui-logo"></div>
+            <div class="uh-right">
+                <span class="layui-breadcrumb" lay-separator="|">
+                    <a href="#">首页</a>
+                    <a href="#">退出</a>
+                </span>
+            </div>
+
+            <div class="uh-menu layui-nav">
+                <li class="layui-nav-item">
+                    <i class="layui-icon layui-icon-menu-fill" style="color: #25b887;font-size:24px"></i>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">个人中心</a></dd>
+                        <dd><a href="">退出</a></dd>
+                    </dl>
+                </li>
+            </div>
         </div>
     </div>
     <div class="layui-panel">
@@ -143,13 +236,193 @@
             <li class="clearfix">
                 <i class="layui-icon layui-icon-ok-circle" style="color: #48b325; font-size:20px"></i>
                 <h4>手机号<span style="color: #2eafbb;">（已绑定）</span></h4>
-                <strong>185****6564&nbsp;&nbsp;&nbsp;</strong>
-                <span style="color: #666666;" class="phone-en-msg">(仅绑定大陆地区手机的用户可进行图像校对、学籍/学历核验)</span>
+                <strong>185****9370</strong>
+                <span class="phone-en-msg">(仅绑定大陆地区手机的用户可进行图像校对、学籍/学历核验)</span>
+                <div class="zl-right">
+                    <a href="javascript:void(0);" class="operation">修改</a>
+                    <a href="javascript:void(0);" class="operation" style="display: none;">收起</a>
+                </div>
+                <form class="layui-form" action="" style="display: none;">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>原手机号</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                          <input type="text" name="oldMobilePhone" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>新手机号</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                          <input type="text" name="mphone" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                          <button type="submit" class="layui-btn" lay-submit lay-filter="demo1">确认</button>
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <li class="clearfix">
+                <i class="layui-icon layui-icon-ok-circle" style="color: #48b325; font-size:20px"></i>
+                <h4>姓名</h4>
+                <strong>XXX</strong>
+                <div class="zl-right">
+                    <a href="javascript:void(0);" class="operation">修改</a>
+                    <a href="javascript:void(0);" class="operation" style="display: none;">收起</a>
+                </div>
+                <form class="layui-form" id="userinfo" action="" style="display: none;">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>国籍/地区</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                            <select name="credentialtype" lay-filter="aihao">
+                                <option value="0" selected>中国大陆</option>
+                                <option value="1">中国香港</option>
+                                <option value="2">中国澳门</option>
+                                <option value="3">中国台湾</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>姓名</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                          <input type="text" name="xm" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>证件类型</label>
+                        <div class="layui-input-inline">
+                          <select name="credentialtype" lay-filter="aihao">
+                            <option value="0" selected>中华人民共和国居民身份证</option>
+                            <option value="1">外国人永久居留身份证</option>
+                            <option value="2">港澳台身份证</option>
+                            <option value="3">华侨身份证/护照(无身份证者可填护照号)</option>
+                            <option value="4">其他</option>
+                            <option value="5">香港永久性居民身份证</option>
+                            <option value="6">澳门永久性居民身份证</option>
+                            <option value="7">台湾居民来往大陆通行证</option>
+
+                          </select>
+                        </div>
+                        <div class="layui-form-mid layui-text-em">请选择证件类型</div>
+                    </div> 
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>证件号码</label>
+                        <div class="layui-input-inline layui-input-wrap">4****************5</div>
+                    </div> 
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>身份证是否长期有效</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="isLong" value="1" title="是" lay-filter="islong" >
+                            <input type="radio" name="isLong" value="0" title="否" lay-filter="islong" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>身份证有效期</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                            <div class="layui-input-prefix"></div>
+                            <input type="text" name="date" id="sdate" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                            <span>~</span>
+                            <span style="display: none;" id="long">长期</span>
+                            <input type="text" id="nolong" name="date" id="edate" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                          <button type="submit" class="layui-btn" lay-submit lay-filter="demo1">确认</button>
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <li class="clearfix">
+                <i class="layui-icon layui-icon-ok-circle" style="color: #48b325; font-size:20px"></i>
+                <h4>国籍/地区</h4>
+                <strong>中国大陆</strong>
+            </li>
+            <li class="clearfix">
+                <i class="layui-icon layui-icon-ok-circle" style="color: #48b325; font-size:20px"></i>
+                <h4>证件类型/证件号码</h4>
+                <strong>
+                    中华人民共和国居民身份证&nbsp;&nbsp;&nbsp;&nbsp;
+                    4****************5&nbsp;&nbsp;&nbsp;&nbsp;
+                    *******3~ *******3
+                </strong>
+                
+            </li>
+            <li class="clearfix">
+                <i class="layui-icon layui-icon-ok-circle" style="color: #48b325; font-size:20px"></i>
+                <h4>密码</h4>
+                <strong>
+                    ****************
+                </strong>
+                <div class="zl-right">
+                    <a href="javascript:void(0);" class="operation">修改</a>
+                    <a href="javascript:void(0);" class="operation" style="display: none;">收起</a>
+                </div>
+                <form class="layui-form" action="" style="display: none;">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>原密码</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                          <input type="password" name="oldPassword" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>新密码</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                          <input type="password" name="password" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"><span class="required">*</span>新密码确认</label>
+                        <div class="layui-input-inline layui-input-wrap">
+                          <input type="password" name="password1" lay-verify="required" autocomplete="off" lay-affix="clear" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                          <button type="submit" class="layui-btn" lay-submit lay-filter="demo1">确认</button>
+                        </div>
+                    </div>
+                </form>
             </li>
         </ul>
         
     </div>
 
     <script src="./layui/layui.js"></script>
+    <script>
+        layui.use(function(){
+            var $ = layui.$;
+            var layer = layui.layer;
+            var laydate = layui.laydate;
+            var form = layui.form;
+            laydate.render({
+                elem: '#sdate'
+            });
+            laydate.render({
+                elem: '#edate'
+            });
+            form.on('radio(islong)', function(data){
+                if(data.value == 1){
+                    $("#long").show();
+                    $("#nolong").hide();
+                }else{
+                    $("#long").hide();
+                    $("#nolong").show();    
+                }
+            });
+            $(".operation").on("click",function(e){
+                var target = $(e.target);
+                var text = $(this).text();
+                $(this).hide();
+                $(this).siblings().show();
+                if(text == "修改"){
+                    $(this).parent().siblings("form.layui-form").show();
+                }else{
+                    $(this).parent().siblings("form.layui-form").hide();
+                }
+
+            })
+        });
+    </script>
 </body>
 </html>
